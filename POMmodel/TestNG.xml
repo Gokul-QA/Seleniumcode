@@ -2,7 +2,7 @@
 <suite name="testCases">
 <test name="Logintestcase">
 <classes>
-<class name="tesctcase.Logintestcase"></class>
+<class name="testCases.Logintestcase"></class>
 </classes>
 </test>
 </suite>
