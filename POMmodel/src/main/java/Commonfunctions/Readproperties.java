@@ -4,13 +4,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class Readproperties {
 	public static Properties prop=null;
@@ -22,7 +20,7 @@ public class Readproperties {
 		return prop;
 
 	}
-	@Before
+	@BeforeTest
 	public void launchbrowser() throws IOException {
 		loadfile();
 		String browser=prop.getProperty("browser");
@@ -35,7 +33,7 @@ public class Readproperties {
 		driver.get(URL);
 		driver.manage().window().maximize();
 	}
-	@After
+	@AfterTest
 	public void closebrowser() {
 		driver.quit();
 

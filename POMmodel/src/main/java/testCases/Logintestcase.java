@@ -1,7 +1,8 @@
 package testCases;
 
-import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
 import Commonfunctions.Readproperties;
 import pageobject.pageobject;
 
